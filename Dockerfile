@@ -1,5 +1,5 @@
 # Base image
-FROM centos:centos7.1.1503
+FROM centos:latest
 MAINTAINER kentaro a
 ENV PATH $PATH:/usr/local/bin
 
@@ -18,8 +18,8 @@ RUN git clone https://github.com/kentaro-a/docker.git
 # apache
 RUN yum -y install httpd
 RUN cp -f /docker/httpd.conf /etc/httpd/conf/
-EXPOSE 80
-ENTRYPOINT /usr/sbin/httpd -D FOREGROUND
+#EXPOSE 80
+#ENTRYPOINT /usr/sbin/httpd -D FOREGROUND
 
 # php70
 RUN yum -y install --enablerepo=remi,remi-php70 php70.x86_64 php70-php-cli.x86_64 php70-php-common.x86_64 php70-php-intl.x86_64 php70-php-json.x86_64 php70-php-mbstring.x86_64 php70-php-mysqlnd.x86_64 php70-php-pdo.x86_64 php70-php-xml.x86_64 php70-runtime.x86_64
