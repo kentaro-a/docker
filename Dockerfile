@@ -22,7 +22,7 @@ RUN cp -f /docker/httpd.conf /etc/httpd/conf/
 #ENTRYPOINT /usr/sbin/httpd -D FOREGROUND
 
 # php70
-RUN yum -y install --enablerepo=epel,remi,remi-php70 php70.x86_64 php70-php-cli.x86_64 php70-php-common.x86_64 php70-php-intl.x86_64 php70-php-json.x86_64 php70-php-mbstring.x86_64 php70-php-mysqlnd.x86_64 php70-php-pdo.x86_64 php70-php-xml.x86_64 php70-runtime.x86_64 php70-php-mcrypt.x86_64 libmcrypt.x86_64 php70-php-opcache.x86_64 php70-php-pecl-apcu.x86_64
+RUN yum --enablerepo=remi-php70 -y install php php-cli php-devel php-common php-mbstring php-mysql php-phpunit-PHPUnit php-pecl-xdebug php-fpm php-gd php-gmp php-mcrypt php-opcache php-pdo php-xml php-intl
 RUN cat /opt/remi/php70/enable >> ~/.bashrc
 RUN source ~/.bashrc
 RUN ln -fs /etc/opt/remi/php70/php.ini /etc/php.ini
