@@ -23,10 +23,10 @@ RUN cp -f /docker/httpd.conf /etc/httpd/conf/
 
 # php70
 RUN yum --enablerepo=remi-php70 -y install php php-cli php-devel php-common php-mbstring php-mysql php-phpunit-PHPUnit php-pecl-xdebug php-fpm php-gd php-gmp php-mcrypt php-opcache php-pdo php-xml php-intl
-RUN cat /opt/remi/php70/enable >> ~/.bashrc
-RUN source ~/.bashrc
-RUN ln -fs /etc/opt/remi/php70/php.ini /etc/php.ini
-RUN cp /docker/php.ini /etc/opt/remi/php70/
+#RUN cat /opt/remi/php70/enable >> ~/.bashrc
+#RUN source ~/.bashrc
+#RUN ln -fs /etc/opt/remi/php70/php.ini /etc/php.ini
+RUN cp -rf /docker/php.ini /etc/php.ini
 
 # vim
 RUN yum -y install vim
