@@ -3,6 +3,8 @@ FROM centos:latest
 MAINTAINER kentaro a
 ENV PATH $PATH:/usr/local/bin
 
+RUN yum -y update
+
 # Install required modules
 RUN yum -y install git
 RUN yum -y install wget
