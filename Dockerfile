@@ -15,7 +15,7 @@ RUN yum -y install epel-release
 RUN rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 
 # Clone configs
-RUN git clone https://github.com/kentaro-a/docker.git
+RUN git clone https://github.com/kentaro-a/env_php70.git
 
 # apache
 RUN yum -y install httpd
