@@ -1,4 +1,4 @@
-# docker
+# Construct an environment of Development. 
 Dev-environment of Centos7,PHP70,apache2.2 based on Docker Container.
 
 # Usage
